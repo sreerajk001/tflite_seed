@@ -55,14 +55,16 @@ class _InputScreenState extends State<InputScreen> {
         setState(() {
           _predictionResult = "Top 3 Crops:\n";
           predictions.asMap().forEach((index, prediction) {
-            _predictionResult += "${index + 1}. ${prediction['crop']}: ${prediction['confidence']}%\n";
+            double confidence = double.tryParse(prediction['confidence'].toString()) ?? 0.0; // ✅ Convert to double safely
+            int confidencePercentage = (confidence * 100).toInt(); // ✅ Convert to whole number percentage
+            _predictionResult += "${index + 1}. ${prediction['crop']}: $confidencePercentage%\n";
           });
         });
       } catch (e) {
-        setState(() {
-          _predictionResult = "Prediction failed. Please try again.";
-        });
+        print("Error during prediction: $e");
       }
+
+
     }
   }
 
