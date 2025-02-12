@@ -18,8 +18,7 @@ The **Crop Prediction App** is a smart and user-friendly mobile application that
 
 1️⃣ **Enter Soil Parameters** – The user inputs seven key parameters related to soil and climate conditions.  
 2️⃣ **Predict Best Crops** – The app processes the data using a pre-trained machine learning model and predicts the top 3 suitable crops.  
-3️⃣ **View Results** – The predicted crops are displayed with their confidence percentages in an elegant format.  
-4️⃣ **Make Informed Decisions** – Farmers can use this information to optimize their crop selection for better yield and sustainability.  
+
 
 ### **Technology Stack**  
 
